@@ -31,10 +31,11 @@ function showMovies(movies) {
         movieEl.classList.add("movie");
 
         movieEl.innerHTML = `
-            <img
+        <input type="checkbox" id="myCheckbox[${poster_path}]" />
+        <label for="myCheckbox[${poster_path}]"> <img
                 src="${IMGPATH + poster_path}"
                 alt="${title}"
-            />
+            /></label>
             <div class="movie-info">
                 <h5>${title}</h5>
                 <span class="${getClassByRate(
